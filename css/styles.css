@@ -32,9 +32,6 @@ footer {
   margin: 1em 0;
   align-items: center;
 }
-.last-row-child {
-  margin-bottom: 1em;
-}
 .row-label {
   margin-left: 1em;
   padding: 0;
@@ -154,6 +151,7 @@ input::placeholder {
 #other-topics {
   height: 8em;
   margin-top: 1em;
+  padding: 1em;
 }
 #signup {
   margin-top: 2em;
@@ -204,11 +202,26 @@ a:hover {
   }
   .contact-container {
     display: flex;
-    margin-top: 2em;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0.5em 0;
     align-items: center;
   }
   .contact-label {
     padding: 0;
-    width: 14em;
+    width: 10em;
+  }
+  .wide-input,
+  textarea,
+  select {
+    width: auto;
+    flex-grow: 1;
+  }
+  #other-topics,
+  #signup {
+    width: 100%;
+  }
+  #signup {
+    margin: 1em 0;
   }
 }

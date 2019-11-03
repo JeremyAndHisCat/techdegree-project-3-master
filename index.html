@@ -41,6 +41,7 @@
               class="wide-input"
               id="name"
               placeholder="required"
+              required
             />
           </div>
 
@@ -52,26 +53,47 @@
               class="wide-input"
               id="email"
               placeholder="required"
+              required
             />
           </div>
 
           <div class="contact-container">
             <label class="contact-label" for="phone">Phone Number</label>
-            <input type="tel" name="phone" class="wide-input" id="phone" />
+            <input
+              type="tel"
+              name="phone"
+              class="wide-input"
+              id="phone"
+              placeholder="phone"
+            />
           </div>
 
           <div class="contact-container">
             <label class="contact-label" for="street">Street Address</label>
-            <input type="text" name="street" class="wide-input" id="street" />
+            <input
+              type="text"
+              name="street"
+              class="wide-input"
+              id="street"
+              placeholder="street"
+            />
           </div>
 
           <div class="contact-container">
             <label class="contact-label" for="city">City</label>
-            <input type="text" name="city" class="wide-input" id="city" />
+            <input
+              type="text"
+              name="city"
+              class="wide-input"
+              id="city"
+              placeholder="city"
+            />
           </div>
 
-          <div class="contact-container"></div>
-            <label class="contact-label" for="state">State</label>
+          <div class="contact-container">
+            <label id="state-label" class="contact-label" for="state"
+              >State</label
+            >
             <select id="state" name="state">
               <option value="" disabled selected value>Choose State</option>
               <option value="alabama">Alabama</option>
@@ -83,9 +105,8 @@
 
           <div class="contact-container">
             <label class="contact-label" for="zip">Zipcode</label>
-            <input type="number" name="zip" id="zip" />
+            <input type="number" name="zip" id="zip" placeholder="zipcode" />
           </div>
-            
         </fieldset>
 
         <fieldset id="newsletter-section">
@@ -115,7 +136,7 @@
               value="javascript"
               id="news-javascript"
             />
-            <label class="row-label last-row-child" for="news-javascript"
+            <label class="row-label" for="news-javascript"
               >Javascript News</label
             >
           </div>
@@ -129,15 +150,17 @@
 
           <div class="news-container">
             <input type="radio" name="format" value="plain" id="format-plain" />
-            <label class="row-label last-row-child" for="format-plain"
-              >Plain text</label
-            >
+            <label class="row-label" for="format-plain">Plain text</label>
           </div>
 
           <label for="other-topics"
             >Other topics you would like to hear about</label
           >
-          <textarea name="other" id="other-topics"></textarea>
+          <textarea
+            name="other"
+            id="other-topics"
+            placeholder="other topics"
+          ></textarea>
 
           <input type="submit" value="Sign Up" class="wide-input" id="signup" />
         </fieldset>
