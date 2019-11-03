@@ -27,7 +27,7 @@ footer {
   width: 92%;
   margin: 0 auto;
 }
-.news-container {
+.newsletter-input {
   display: flex;
   margin: 1em 0;
   align-items: center;
@@ -44,9 +44,10 @@ fieldset {
   padding: 2em 0;
   margin: 3em 0;
 }
-.contact-container {
+.contact-input {
   display: flex;
   flex-wrap: wrap;
+  transition-duration: 0.5s;
 }
 .center-text {
   text-align: center;
@@ -75,6 +76,9 @@ footer {
 input {
   padding: 1em;
 }
+#newsletter-textarea {
+  transition-duration: 0.5s;
+}
 input:focus,
 textarea:focus {
   background-color: #cffff9;
@@ -98,10 +102,18 @@ textarea:focus {
   text-align: center;
 }
 
-/* / / /*/
-/* MAIN */
-/* / / /*/
+/* / / / / / / / / */
+/* CONTACT SECTION */
+/* / / / / / / / / */
 
+#contact-container {
+  background-color: #fffdf6;
+  padding-top: 2em;
+}
+#contact-fieldset {
+  margin-top: 0;
+  padding-top: 2em;
+}
 #page-description-container {
   border-bottom: solid 6px #2b3946;
 }
@@ -134,8 +146,6 @@ input::placeholder {
   font-style: italic;
   padding-right: 1em;
 }
-.contact-label {
-}
 #state {
   margin: 1em 0;
   height: 3em;
@@ -143,7 +153,17 @@ input::placeholder {
 #zip {
   margin: 1em 0;
 }
-#newsletter-section {
+.contact-input:focus-within,
+.newsletter-input:focus-within,
+#newsletter-textarea:focus-within {
+  background: rgb(175, 255, 248);
+}
+
+/* / / / / / / / / / / */
+/* NEWSLETTER SECTION  */
+/* / / / / / / / / / / */
+
+#newsletter-fieldset {
   border: none;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -151,6 +171,7 @@ input::placeholder {
 #other-topics {
   height: 8em;
   margin-top: 1em;
+  margin-bottom: 0;
   padding: 1em;
 }
 #signup {
@@ -200,7 +221,7 @@ a:hover {
   footer {
     width: 50%;
   }
-  .contact-container {
+  .contact-input {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
