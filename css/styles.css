@@ -27,15 +27,6 @@ footer {
   width: 92%;
   margin: 0 auto;
 }
-.newsletter-input {
-  display: flex;
-  margin: 1em 0;
-  align-items: center;
-}
-.row-label {
-  margin-left: 1em;
-  padding: 0;
-}
 fieldset {
   display: flex;
   flex-wrap: wrap;
@@ -44,18 +35,21 @@ fieldset {
   padding: 2em 0;
   margin: 3em 0;
 }
-.contact-input {
-  display: flex;
-  flex-wrap: wrap;
-  transition-duration: 0.5s;
-}
-.center-text {
-  text-align: center;
-}
 input,
 textarea {
   background-color: #eff0f1;
-  border-radius: 4px;
+  border-radius: 5px;
+  border: none;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border: 2px solid #41688d;
+  outline: none;
+}
+select {
+  color: lightgrey;
+  background-color: #eff0f1;
   border: none;
 }
 label,
@@ -76,9 +70,6 @@ footer {
 input {
   padding: 1em;
 }
-#newsletter-textarea {
-  transition-duration: 0.5s;
-}
 input:focus,
 textarea:focus {
   background-color: #cffff9;
@@ -88,6 +79,26 @@ textarea:focus {
 /* HEADER */
 /* / / / /*/
 
+.newsletter-input {
+  display: flex;
+  margin: 1em 0;
+  align-items: center;
+}
+.row-label {
+  margin-left: 1em;
+  padding: 0;
+}
+.contact-input {
+  display: flex;
+  flex-wrap: wrap;
+  transition-duration: 0.5s;
+}
+.center-text {
+  text-align: center;
+}
+#newsletter-textarea {
+  transition-duration: 0.5s;
+}
 #title-container {
   display: flex;
   align-items: center;
@@ -142,9 +153,13 @@ textarea:focus {
   color: #2b3946;
 }
 input::placeholder {
-  text-align: right;
+  text-align: left;
   font-style: italic;
   padding-right: 1em;
+  color: #b8b8b8;
+}
+.required::placeholder {
+  text-align: right;
 }
 #state {
   margin: 1em 0;
@@ -168,6 +183,9 @@ input::placeholder {
   margin-bottom: 0;
   padding-bottom: 0;
 }
+#news-paragraph {
+  margin-top: 0;
+}
 #other-topics {
   height: 8em;
   margin-top: 1em;
@@ -186,6 +204,7 @@ input::placeholder {
 #copyright {
   font-size: 1em;
   font-style: italic;
+  color: #b8b8b8;
 }
 
 /* / / / / / / */
@@ -204,15 +223,10 @@ a:hover {
   font-size: 1.7em;
   background-color: #00c1b7;
 }
-/* CLEARFIX */
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
+/* / / / / / / / */
 /* MEDIA QUERIES */
+/* / / / / / / / */
 
 /* SCREEN WIDTHS ABOVE 768 PIXELS */
 
